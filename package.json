@@ -1,0 +1,47 @@
+{
+  "name": "weirdconsole",
+  "version": "0.0.4",
+  "description": "here has console.img,console.video,console.loading,console.npm",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/weirdconsole.es.js",
+  "unpkg": "dist/weirdconsole.iife.js",
+  "jsdelivr": "dist/weirdconsole.iife.js",
+  "module": "./dist/weirdconsole.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/weirdconsole.es.js",
+      "require": "./dist/weirdconsole.umd.js"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FliPPeDround/WeirdConsole.git"
+  },
+  "keywords": [
+    "console",
+    "log",
+    "devtools",
+    "debug",
+    "npm"
+  ],
+  "author": "Pom Joy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FliPPeDround/WeirdConsole/issues"
+  },
+  "homepage": "https://github.com/FliPPeDround/WeirdConsole#readme",
+  "devDependencies": {
+    "chalk": "^5.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2"
+  }
+}
