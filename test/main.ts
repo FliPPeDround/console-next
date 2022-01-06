@@ -1,8 +1,11 @@
+import './style.css'
 import './../dist/weirdconsole.es'
 
 (async () => {
-  await console.npm('loadsh')
-  console.log(_.random())
+  await console.img('dda', {
+    width: 800,
+    height: 122
+  })
 })()
 
 const app = document.querySelector<HTMLDivElement>('#app')!

@@ -1,6 +1,6 @@
 {
   "name": "weirdconsole",
-  "version": "0.0.4",
+  "version": "0.0.91",
   "description": "here has console.img,console.video,console.loading,console.npm",
   "files": [
     "dist"
@@ -18,7 +18,7 @@
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "repository": {

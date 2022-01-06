@@ -1,6 +1,5 @@
-import { ImgInfo } from './types'
 Object.defineProperty(console, "img", {
-  value: function img (src: string, info: ImgInfo) {
+  value: function img (src: string, info: InfoType.ImgInfo) {
     if (!src) {
       console.warn('missing imgSrc property')
       return
