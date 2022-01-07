@@ -17,5 +17,12 @@ declare global {
       height?: number
       loop?: boolean
     }): void
+
+    edit(selectors?: string): void
+
+    color(color: {
+      color: string
+      content: string
+    }[]): void
   }
 }
