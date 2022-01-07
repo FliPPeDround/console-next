@@ -1,6 +1,6 @@
 {
   "name": "weirdconsole",
-  "version": "0.0.91",
+  "version": "0.1.0",
   "description": "here has console.img,console.video,console.loading,console.npm",
   "files": [
     "dist"

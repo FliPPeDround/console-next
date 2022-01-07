@@ -4,7 +4,7 @@ This allows you to do some weird and useless in the browser's devtools
 # Installation
 #### Simply load it from a CDN:
 ```html5
-<script src=" https://unpkg.com/weirdconsole"></script>
+<script src="https://unpkg.com/weirdconsole"></script>
 ```
 
 #### use npm:
@@ -41,6 +41,44 @@ consoel.npm('https://unpkg.com/loadsh@0.0.4/lodash.js')
   await console.npm("loadsh")
   console.log(_.random(5)) //2
 })()
+```
+
+### console.edit
+```javascript
+console.edit()
+```
+
+```javascript
+console.edit('#app')
+```
+
+### console.color()
+
+```javascript
+console.color([
+  {
+    color: string,
+    content: string
+  }
+])
+```
+
+#### 🌰 example：
+```javascript
+console.color([
+  {
+    color: 'red',
+    content: 'red'
+  },
+  {
+    color: 'rgb(0, 255, 0)',
+    content: 'green'
+  },
+  {
+    color: '#000FFF',
+    content: 'blue'
+  }
+])
 ```
 
 ### console.img
