@@ -8,7 +8,7 @@ Object.defineProperty(console, "edit", {
         console.warn(`'${selectors}' missing, please check it`)
       }
     }else {
-      document.body.contentEditable = true as unknown as string
+      document.designMode = 'on'
     }
   },
   enumerable: true,

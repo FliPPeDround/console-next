@@ -24,4 +24,4 @@ app.innerHTML = `
   <h1 class="h1a">Hello WeirdConsole</h1>
   <p class="edit-box">console.edit编辑实验区</p>
 `
-console.edit('#edit-box')
+console.edit('.edit-box')
