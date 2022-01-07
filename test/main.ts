@@ -1,12 +1,9 @@
 import './style.css'
 import './../src/index'
 
-// (async () => {
-//   await console.img('dda', {
-//     width: 800,
-//     height: 122
-//   })
-// })()
+(async () => {
+  await console.npm('lodash')
+})()
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 console.color([

@@ -26,7 +26,7 @@ function npmInstallInBrowser (name: string, info: InfoType.NpmInfo, successCallb
 }
 
 Object.defineProperty(console, "npm", {
-  value: async function npm (name: string, info: InfoType.NpmInfo) {
+  value: async function npm (name: string, info: InfoType.NpmInfo): Promise<void> {
     if (!name) {
       console.error('missing originName property')
       return

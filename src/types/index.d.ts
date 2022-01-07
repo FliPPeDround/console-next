@@ -3,7 +3,7 @@ declare global {
   interface Console {
     npm(pkgName: string, type?: {
       type?: 'module'
-    }): void
+    }): Promise<void>
 
     loading(str: string): void
 
