@@ -21,8 +21,9 @@ declare global {
     edit(selectors?: string): void
 
     color(color: {
-      color: string
-      content: string
+      color?: string
+      content?: any
+      backgroundColor?: string
     }[]): void
   }
 }

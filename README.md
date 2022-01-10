@@ -1,27 +1,30 @@
-# WeirdConsole
+<h1 align=center>console-next</h1>
+
+
 This allows you to do some weird and useless in the browser's devtools
 
 # Installation
 #### Simply load it from a CDN:
 ```html5
-<script src="https://unpkg.com/weirdconsole"></script>
+<script src="https://unpkg.com/console-next"></script>
 ```
 
 #### use npm:
 ```
-npm i weirdconsole
+npm i console-next
 ```
 
 # Usage
 
 ```javascript
-import 'weirdconsole'
+import 'console-next'
 ```
 
-### consoele.npm
+### console.npm
 
+This methods help to you install npm packages in the devtools
 ```javascript
-consoel.npm('module_name',{
+console.npm('module_name',{
   type?: 'module'
 })
 ```
@@ -29,11 +32,11 @@ consoel.npm('module_name',{
 
 #### Import specific version:
 ```javascript
-consoel.npm('loadsh@0.0.4')
+console.npm('loadsh@0.0.4')
 ```
 #### use URL:
 ```javascript
-consoel.npm('https://unpkg.com/loadsh@0.0.4/lodash.js')
+console.npm('https://unpkg.com/loadsh@0.0.4/lodash.js')
 ```
 #### 🌰 example：
 ```javascript
@@ -44,21 +47,29 @@ consoel.npm('https://unpkg.com/loadsh@0.0.4/lodash.js')
 ```
 
 ### console.edit
+
+This methods allows you webpage as editor
+
+If no arguments are passed, all webpage will as editor
 ```javascript
 console.edit()
 ```
 
+Of course, you can also pass parameters and select a DOM as the editor
 ```javascript
 console.edit('#app')
 ```
 
 ### console.color()
 
-```javascript
+It can help you print out color information in the devtools
+
+```typescript
 console.color([
   {
-    color: string,
-    content: string
+    color?: string,
+    content?: any,
+    backgroundColor?: string
   }
 ])
 ```
@@ -68,7 +79,8 @@ console.color([
 console.color([
   {
     color: 'red',
-    content: 'red'
+    content: 'red',
+    backgrounColor: 'rgb(0, 255, 0)'
   },
   {
     color: 'rgb(0, 255, 0)',
@@ -82,24 +94,30 @@ console.color([
 ```
 
 ### console.img
-
+if you want to print images in the devtools, let's use it
 ```javascript
 console.img(url, {
   width?: number,
   height?: number
 })
 ```
-### console.loading
-```javascript
-console.loading('loading...')
-```
+
 
 ### console.video
+If you still want to watch video in devtools, you must try it
+
 ```javascript
 console.video(url, {
   width?: number,
   height?: number,
   loop?: boolean
 })
+```
+
+### console.loading
+
+a loading gif
+```javascript
+console.loading('loading...')
 ```
 

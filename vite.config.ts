@@ -8,7 +8,7 @@ export default defineConfig({
     minify: true,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'WeirdConsole',
+      name: 'console-next',
       formats: ['es', 'umd', 'iife']
     },
     rollupOptions: {

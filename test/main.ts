@@ -1,19 +1,20 @@
 import './style.css'
 import './../src/index'
 
-(async () => {
-  await console.npm('lodash')
-})()
+// (async () => {
+//   await console.npm('lodash')
+// })()
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 console.color([
   {
-    color: 'red',
-    content: '红'
+    content: '你好',
+    backgroundColor: 'red'
   },
   {
-    color: 'rgba(255,255,255)',
-    content: '蓝'
+    color: 'rgba(0,0,255)',
+    content: '蓝',
+    backgroundColor: 'white'
   },
 ])
 
