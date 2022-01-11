@@ -1,13 +1,11 @@
 lockfileVersion: 5.3
 
 specifiers:
-  chalk: ^5.0.0
   rollup-plugin-terser: ^7.0.2
   typescript: ^4.4.4
   vite: ^2.7.2
 
 devDependencies:
-  chalk: 5.0.0
   rollup-plugin-terser: 7.0.2
   typescript: 4.5.4
   vite: 2.7.10
@@ -57,11 +55,6 @@ packages:
       ansi-styles: 3.2.1
       escape-string-regexp: 1.0.5
       supports-color: 5.5.0
-    dev: true
-
-  /chalk/5.0.0:
-    resolution: {integrity: sha512-/duVOqst+luxCQRKEo4bNxinsOQtMP80ZYm7mMqzuh5PociNL0PvmHFvREJ9ueYL2TxlHjBcmLCdmocx9Vg+IQ==, tarball: chalk/download/chalk-5.0.0.tgz}
-    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
   /color-convert/1.9.3:

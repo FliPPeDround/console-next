@@ -1,29 +1,29 @@
 {
   "name": "console-next",
-  "version": "0.1.0",
-  "description": "here has console.img,console.video,console.loading,console.npm",
+  "version": "0.1.2",
+  "description": "This allows you to do some weird and useless in the browser's devtools",
   "files": [
     "dist"
   ],
-  "main": "dist/weirdconsole.es.js",
-  "unpkg": "dist/weirdconsole.iife.js",
-  "jsdelivr": "dist/weirdconsole.iife.js",
-  "module": "./dist/weirdconsole.es.js",
+  "main": "dist/console-next.es.js",
+  "unpkg": "dist/console-next.iife.js",
+  "jsdelivr": "dist/console-next.iife.js",
+  "module": "./dist/console-next.es.js",
   "exports": {
     ".": {
-      "import": "./dist/weirdconsole.es.js",
-      "require": "./dist/weirdconsole.umd.js"
+      "import": "./dist/console-next.es.js",
+      "require": "./dist/console-next.umd.js"
     }
   },
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build && tsc && node build.config.js",
+    "upnpm": "nrm use npm && npm publish"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FliPPeDround/WeirdConsole.git"
+    "url": "git+https://github.com/FliPPeDround/console-next.git"
   },
   "keywords": [
     "console",
@@ -35,11 +35,10 @@
   "author": "Pom Joy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FliPPeDround/WeirdConsole/issues"
+    "url": "https://github.com/FliPPeDround/console-next/issues"
   },
-  "homepage": "https://github.com/FliPPeDround/WeirdConsole#readme",
+  "homepage": "https://github.com/FliPPeDround/console-next#readme",
   "devDependencies": {
-    "chalk": "^5.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.4.4",
     "vite": "^2.7.2"
