@@ -121,3 +121,10 @@ a loading gif
 console.loading('loading...')
 ```
 
+### console.progress
+
+just a progressbar in devtools
+```javascript
+console.progress(percentage: number, callback: () => percentage, ms: number)
+```
+

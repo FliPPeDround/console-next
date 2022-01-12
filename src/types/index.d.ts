@@ -25,5 +25,7 @@ declare global {
       content?: any
       backgroundColor?: string
     }[]): void
+
+    progress(percentage: number, callback: () => number, ms: number): void
   }
 }
