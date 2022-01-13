@@ -1,6 +1,6 @@
 {
   "name": "console-next",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "This allows you to do some weird and useless in the browser's devtools",
   "files": [
     "dist"
@@ -17,9 +17,9 @@
   },
   "types": "./dist/types/index.d.ts",
   "scripts": {
-    "dev": "vite",
+    "dev": "sudo vite",
     "build": "vite build && tsc && node build.config.js",
-    "upnpm": "nrm use npm && npm publish"
+    "updata": "sudo pnpm build && node updata.config.js && nrm use npm && npm publish"
   },
   "repository": {
     "type": "git",
