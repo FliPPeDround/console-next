@@ -17,7 +17,6 @@ function replacer(key, value) {
       versionArry[2] += 1
     }
     const version = versionArry.map(String).join('.')
-    console.log('version: '+ version)
     return version
   }
   return value;

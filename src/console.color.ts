@@ -16,8 +16,12 @@ Object.defineProperty(console, "color", {
       css: []
     }
     colorInfo.forEach((item) => {
-      logData.content += `%c${item?.content ?? ''}`
-      logData.css.push(`${item?.color ? 'color:' + item.color : ''}` + `${item?.backgroundColor ? ';background-color:' + item.backgroundColor : ''}`)
+      logData.content += `%c${item?.content ?? ' '}`
+      logData.css.push(
+        `${item?.color ? 'color:' + item.color : ''}` +
+        `${item?.backgroundColor ? ';background-color:' + item.backgroundColor : ''}` +
+        ';padding: 3px' + ';border-radius: 3px'
+      )
     })
     console.log(
       `${logData.content}`,
