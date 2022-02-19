@@ -20,6 +20,7 @@ console.color([
     content: '蓝',
   },
   {
+    content: '  ',
     color: 'rgba(0,0,255)',
     backgroundColor: 'red'
   },
@@ -31,3 +32,6 @@ app.innerHTML = `
   <p class="edit-box">console.edit编辑实验区</p>
 `
 console.edit('.edit-box')
+console.dom('.edit-box')
+console.dom('#app')
+console.dom()

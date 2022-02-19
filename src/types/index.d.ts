@@ -19,6 +19,7 @@ declare global {
     }): void
 
     edit(selectors?: string): void
+    dom(selectors?: string): void
 
     color(color: {
       color?: string
@@ -27,5 +28,6 @@ declare global {
     }[]): void
 
     progress(percentage: number, callback: () => number, ms: number): void
+
   }
 }

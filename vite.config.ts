@@ -3,6 +3,9 @@ import { resolve } from 'path'
 import { terser } from 'rollup-plugin-terser'
 
 export default defineConfig({
+  server: {
+    open: true
+  },
   build: {
     target: 'esnext',
     minify: true,

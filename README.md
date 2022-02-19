@@ -60,6 +60,20 @@ Of course, you can also pass parameters and select a DOM as the editor
 console.edit('#app')
 ```
 
+### console.dom
+
+This methods will print dom elements in devtools
+
+If no arguments are passed, will print 'document.body'
+```javascript
+console.dom()
+```
+
+Of course, you can also pass parameters and select a DOM to print
+```javascript
+console.dom('#app')
+```
+
 ### console.color()
 
 It can help you print out color information in the devtools
