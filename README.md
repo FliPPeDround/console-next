@@ -1,7 +1,7 @@
 <h1 align=center>console-next</h1>
 
 
-This allows you to do some weird and useless in the browser's devtools
+This allows you to do some weird and useless in the browser's devtools.
 
 # Installation
 #### Simply load it from a CDN:
@@ -116,6 +116,11 @@ console.img(url, {
 })
 ```
 
+Example:
+```js
+console.img('https://static.npmjs.com/58a19602036db1daee0d7863c94673a4.png', { width: 40, height: 40 })
+console.img('https://lodash.com/assets/img/lodash.svg', { width: 40, height: 40 })
+```
 
 ### console.video
 If you still want to watch video in devtools, you must try it
@@ -128,6 +133,16 @@ console.video(url, {
 })
 ```
 
+Example: Play "Big Buck Bunny" in console!
+
+```js
+console.video(
+  // from https://en.wikipedia.org/wiki/Big_Buck_Bunny
+  'https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Big_Buck_Bunny_4K.webm/Big_Buck_Bunny_4K.webm.480p.vp9.webm',
+  { width: 400, height: 200 }
+)
+```
+
 ### console.loading
 
 a loading gif
@@ -138,7 +153,18 @@ console.loading('loading...')
 ### console.progress
 
 just a progressbar in devtools
+
 ```javascript
 console.progress(percentage: number, callback: () => percentage, ms: number)
 ```
+
+Example: The progress bar increases by 5 every 200 milliseconds
+
+```javascript
+{
+  let i = 5
+  console.progress(i, () => i += 5, 200)
+}
+```
+
 
