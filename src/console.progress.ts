@@ -5,7 +5,7 @@ function progressStyle (percentage: number, progressInterval: NodeJS.Timer) {
   if (percentage >= 100) {
     console.clear()
     console.log(`${stroke.repeat(40)} 100%`)
-    console.color([{
+    console.color?.([{
       color: 'rgb(0,255,0)',
       content: '❤️ success loaded'
     }])
