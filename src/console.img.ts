@@ -1,5 +1,5 @@
-Object.defineProperty(console, "img", {
-  value: function img (src: string, info: InfoType.ImgInfo) {
+Object.defineProperty(console, 'img', {
+  value: function img(src: string, info: InfoType.ImgInfo) {
     if (!src) {
       console.warn('missing imgSrc property')
       return
@@ -7,11 +7,11 @@ Object.defineProperty(console, "img", {
     const width = info?.width ?? 320
     const height = info?.height ?? 240
     console.log(
-      "%c ",
+      '%c ',
       `background: url(${src}) no-repeat;
       background-size: ${width}px ${height}px;
       padding-left: ${width}px;
-      line-height: ${height}px;`
+      line-height: ${height}px;`,
     )
   },
   enumerable: true,

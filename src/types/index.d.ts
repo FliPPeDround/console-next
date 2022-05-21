@@ -1,4 +1,4 @@
-export{}
+export {}
 declare global {
   interface Console {
     npm(pkgName: string, type?: {

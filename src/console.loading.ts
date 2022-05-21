@@ -1,11 +1,11 @@
-Object.defineProperty(console, "loading", {
-  value: function loading (message: string) {
+Object.defineProperty(console, 'loading', {
+  value: function loading(message: string) {
     console.log(
       `%c ${message ?? ''}`,
       `background: url('data:image/gif;base64,R0lGODlhIAAgAPIAAP///93d3bu7u5mZmQAA/wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFBgAEACwAAAAAIAAgAAADh0i63AAtyskevSxE2wbOgVZBzGB+SygqnGJ6qKKO5RnL4dK+nxDNBA6v0xAYfalcx+YaLo5I2QTWZDKgUczLGoF+tihjjHsrm89b8C3NTpfb1LN8ro1fyBL13ZnX1/kLfnaBNVyCZHx+BINDNoCLX0ySeHtxVo+VNYVrhnaYUxGIdE2jU4MUCQAh+QQFBgAEACwHAAAAFwANAAADO0i6KsIwRiflmA+GODqkTCBy3gIq4kZeZoaOVkmcaaV0LFhDAINHOwVg2FuwgAxi0RZRLplJItQ2hCQAACH5BAUGAAQALA8AAAARABEAAAMxOEPc/upJF5+YpDbBpybc5S1bN5biCZpOMIVtIL/xjDFyfuP63ti+oDAIKBqLt+MxAQAh+QQFBgAEACwTAAIADQAXAAADNEhKs+4jPijnis2yavEUF0cIJKhkSmk+6uqoWurGdO0EeI4/um7/DwCAJhQSi8MY8mgkLhIAIfkEBQYABAAsEwAHAA0AFwAAAzNIujv8ZEgH46xT4luV7mAYCmRJPqYprlUQhK4Lxy8DMPQC7His7LdH7ccLAY1F0NHYSQAAIfkEBQYABAAsBwATABcADQAAAztIutw0w0kJ4byr2gamYBoDjI5ggtUydkQQKObXRMq6uEs82febnw6eAveTiUgMYjHoUOYwSR904rwkAAAh+QQFBgAEACwCABMAFwANAAADOkiqAPswsuakJbRdm1+ww9MtQRkNqBiVHyEIChpe7PIuslXbMJ6uJt4jB9kJhz9P5AaZbRTMpyUKSQAAIfkEBQYABAAsAAAPABEAEQAAAzEIukr+jzFIq704kxD045wGhtkICZb5CGxasSgxDBj8zJd905bu4K8WBPiqED1HzSwBACH5BAUGAAQALAAABwANABcAAAMySAraviC+F+Vs1V6SN/RgGIzk+JRlqK6KIICue8XyRDtDczdDr0+93CboIRZ9Q2TRkQAAOw==') no-repeat;
       background-size: 13px 13px;
       padding-left: 13px;
-      line-height: 13px;`
+      line-height: 13px;`,
     )
   },
   enumerable: true,

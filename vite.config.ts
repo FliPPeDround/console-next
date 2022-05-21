@@ -1,23 +1,17 @@
-import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import { terser } from 'rollup-plugin-terser'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   server: {
-    open: true
+    open: true,
   },
   build: {
     target: 'esnext',
-    minify: true,
+    minify: 'terser',
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'consoleNext',
-      formats: ['es', 'umd', 'iife']
+      formats: ['es', 'umd', 'iife'],
     },
-    rollupOptions: {
-      plugins: [
-        terser()
-      ]
-    }
-  }
+  },
 })

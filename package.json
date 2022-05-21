@@ -1,30 +1,7 @@
 {
   "name": "console-next",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "This allows you to do some weird and useless in the browser's devtools",
-  "files": [
-    "dist"
-  ],
-  "main": "dist/console-next.es.js",
-  "unpkg": "dist/console-next.iife.js",
-  "jsdelivr": "dist/console-next.iife.js",
-  "module": "./dist/console-next.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/console-next.es.js",
-      "require": "./dist/console-next.umd.js"
-    }
-  },
-  "types": "./dist/types/index.d.ts",
-  "scripts": {
-    "dev": "sudo vite",
-    "build": "vite build && tsc && node build.config.js",
-    "updata": "sudo pnpm build && node updata.config.js && nrm use npm && npm publish"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FliPPeDround/console-next.git"
-  },
   "keywords": [
     "console",
     "log",
@@ -32,14 +9,39 @@
     "debug",
     "npm"
   ],
-  "author": "Pom Joy",
   "license": "MIT",
+  "author": "Pom Joy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FliPPeDround/console-next.git"
+  },
+  "main": "dist/console-next.es.js",
+  "module": "./dist/console-next.es.js",
+  "types": "./dist/types/index.d.ts",
+  "unpkg": "dist/console-next.iife.js",
+  "jsdelivr": "dist/console-next.iife.js",
+  "exports": {
+    ".": {
+      "import": "./dist/console-next.es.js",
+      "require": "./dist/console-next.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc && node build.config.js",
+    "updata": "pnpm build && node updata.config.js && nrm use npm && npm publish"
+  },
   "bugs": {
     "url": "https://github.com/FliPPeDround/console-next/issues"
   },
   "homepage": "https://github.com/FliPPeDround/console-next#readme",
   "devDependencies": {
-    "rollup-plugin-terser": "^7.0.2",
+    "@antfu/eslint-config": "^0.23.1",
+    "@types/node": "^17.0.35",
+    "eslint": "^8.16.0",
     "typescript": "^4.4.4",
     "vite": "^2.7.2"
   }

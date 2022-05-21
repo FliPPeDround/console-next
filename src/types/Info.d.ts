@@ -3,12 +3,12 @@ declare namespace InfoType {
     width?: number
     height?: number
   }
-  
+
   interface NpmInfo {
     type?: 'module'
   }
-  
-  interface VideoInfo extends ImgInfo{
+
+  interface VideoInfo extends ImgInfo {
     loop?: boolean
   }
 }

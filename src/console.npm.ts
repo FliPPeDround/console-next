@@ -1,4 +1,4 @@
-function npmDownload (src: string, originName: string, info: InfoType.NpmInfo, successCallback: (arg0: void) => void, errorCallback: (arg0: void) => void) {
+function npmDownload(src: string, originName: string, info: InfoType.NpmInfo, successCallback: (arg0: void) => void, errorCallback: (arg0: void) => void) {
   console.loading(`'${originName}' is loading...`)
   console.time(`📂 '${originName}' is loaded,timer`)
   console.time(`🔒 '${originName}' Fail to load,timer`)
@@ -15,24 +15,24 @@ function npmDownload (src: string, originName: string, info: InfoType.NpmInfo, s
   document.body.removeChild(npmInstallScript)
 }
 
-function npmInstallInBrowser (name: string, info: InfoType.NpmInfo, successCallback: { (value: unknown): void; (arg0: void): void; (arg0: void): void }, errorCallback: { (reason?: any): void; (arg0: void): void; (arg0: void): void }) {
+function npmInstallInBrowser(name: string, info: InfoType.NpmInfo, successCallback: { (value: unknown): void; (arg0: void): void; (arg0: void): void }, errorCallback: { (reason?: any): void; (arg0: void): void; (arg0: void): void }) {
   const originName = name.trim()
   console.log(originName)
-  if (/^https?:\/\//.test(originName)) {
+  if (/^https?:\/\//.test(originName))
     npmDownload(originName, originName, info, successCallback, errorCallback)
-  } else {
+
+  else
     npmDownload(`https://unpkg.com/${originName}`, originName, info, successCallback, errorCallback)
-  }
 }
 
-Object.defineProperty(console, "npm", {
-  value: async function npm (name: string, info: InfoType.NpmInfo): Promise<void> {
+Object.defineProperty(console, 'npm', {
+  value: async function npm(name: string, info: InfoType.NpmInfo): Promise<void> {
     if (!name) {
       console.error('missing originName property')
       return
     }
     if (info?.type !== 'module' && info?.type !== undefined) {
-      console.error("type must be 'module'")
+      console.error('type must be \'module\'')
       return
     }
     await new Promise((resolve, reject) => {

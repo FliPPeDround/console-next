@@ -1,5 +1,6 @@
 import './style.css'
-import './../src/index'
+// import './../src/index'
+import './../dist/console-next.es.js'
 
 // (async () => {
 //   await console.npm('lodash')
@@ -8,21 +9,22 @@ import './../src/index'
 const app = document.querySelector<HTMLDivElement>('#app')!
 console.color([
   {
-    content: '你好',
-    backgroundColor: 'red'
+    color: '#213547',
+    content: ' console-next ',
+    backgroundColor: '#42d392',
   },
   {
-    color: 'rgba(0,0,255)',
-    content: '蓝',
-    backgroundColor: 'red'
+    color: '#91c8e4',
+    content: ' v0.1.5 ',
+    backgroundColor: '#3a3a3a',
   },
+])
+// eslint-disable-next-line no-console
+console.color([
   {
-    content: '蓝',
-  },
-  {
-    content: '  ',
-    color: 'rgba(0,0,255)',
-    backgroundColor: 'red'
+    color: '#91c8e4',
+    content: 'Hello console-next !',
+    backgroundColor: 'linear-gradient(to right, #42d392, #3a3a3a)',
   },
 ])
 // let i = 10
