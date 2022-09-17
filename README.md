@@ -89,7 +89,6 @@ console.img(url, {
 Example:
 ```js
 console.img('https://static.npmjs.com/58a19602036db1daee0d7863c94673a4.png', { width: 40, height: 40 })
-console.img('https://lodash.com/assets/img/lodash.svg', { width: 40, height: 40 })
 ```
 
 ### console.video
