@@ -1,6 +1,6 @@
 {
   "name": "console-next",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "This allows you to do some weird and useless in the browser's devtools",
   "keywords": [
     "console",
