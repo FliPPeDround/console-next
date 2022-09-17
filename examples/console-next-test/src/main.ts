@@ -1,6 +1,6 @@
 import './style.css'
-// import './../src/index'
 import 'console-next'
+
 // (async () => {
 //   await console.npm('lodash')
 // })()
@@ -22,7 +22,7 @@ console.color([
 console.color([
   {
     color: '#91c8e4',
-    content: 'Hello console-next !',
+    content: 'Hello console-next',
     backgroundColor: 'linear-gradient(to right, #42d392, #3a3a3a)',
   },
 ])
@@ -36,3 +36,5 @@ console.edit('.edit-box')
 console.dom('.edit-box')
 console.dom('#app')
 console.dom()
+
+console.img('https://static.npmjs.com/58a19602036db1daee0d7863c94673a4.png', { width: 40, height: 40 })

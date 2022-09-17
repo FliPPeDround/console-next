@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@antfu/eslint-config': ^0.23.1
+      '@types/image-to-base64': ^2.1.0
       '@types/node': ^17.0.35
       bumpp: ^8.2.1
       eslint: ^8.16.0
@@ -12,6 +13,7 @@ importers:
       typescript: ^4.4.4
     devDependencies:
       '@antfu/eslint-config': 0.23.1_irgkl5vooow2ydyo6aokmferha
+      '@types/image-to-base64': 2.1.0
       '@types/node': 17.0.45
       bumpp: 8.2.1
       eslint: 8.23.1
@@ -232,6 +234,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+    dev: true
+
+  /@types/image-to-base64/2.1.0:
+    resolution: {integrity: sha512-UgmqJVJyPIkzzI23TWqLc9iO+hZTzNoVD0rEf+I70FeKtcxxvLIlKJ5CrejkxkvDc/8/lk9yswSYZoAv8eyOYQ==}
     dev: true
 
   /@types/json-schema/7.0.11:
