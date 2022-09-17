@@ -1,7 +1,6 @@
 import './style.css'
 // import './../src/index'
-import './../dist/console-next.es.js'
-
+import 'console-next'
 // (async () => {
 //   await console.npm('lodash')
 // })()

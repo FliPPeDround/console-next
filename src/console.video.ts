@@ -1,3 +1,9 @@
+interface VideoOptions {
+  width?: number
+  height?: number
+  loop?: boolean
+}
+
 let old_imgSrc = ''
 function captureImage(ctx: HTMLCanvasElement, video: HTMLVideoElement) {
   ctx.getContext('2d')?.drawImage(video, 0, 0, video.width, video.height)
@@ -9,7 +15,7 @@ function captureImage(ctx: HTMLCanvasElement, video: HTMLVideoElement) {
 }
 
 Object.defineProperty(console, 'video', {
-  value: function video(url: string, info: InfoType.VideoInfo) {
+  value: function video(url: string, info: VideoOptions) {
     if (!url) {
       console.warn('missing videoSrc property')
       return

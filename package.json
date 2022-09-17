@@ -15,24 +15,25 @@
     "type": "git",
     "url": "git+https://github.com/FliPPeDround/console-next.git"
   },
-  "main": "dist/console-next.es.js",
-  "module": "./dist/console-next.es.js",
-  "types": "./dist/types/index.d.ts",
-  "unpkg": "dist/console-next.iife.js",
-  "jsdelivr": "dist/console-next.iife.js",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "types/index.d.ts",
+  "unpkg": "dist/index.global.js",
+  "jsdelivr": "dist/index.global.js",
   "exports": {
     ".": {
-      "import": "./dist/console-next.es.js",
-      "require": "./dist/console-next.umd.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.mjs"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && tsc && node build.config.js",
-    "updata": "pnpm build && node updata.config.js && nrm use npm && npm publish"
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "release": "bumpp && npm publish"
   },
   "bugs": {
     "url": "https://github.com/FliPPeDround/console-next/issues"
@@ -41,8 +42,9 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.23.1",
     "@types/node": "^17.0.35",
+    "bumpp": "^8.2.1",
     "eslint": "^8.16.0",
-    "typescript": "^4.4.4",
-    "vite": "^2.7.2"
+    "tsup": "^6.2.3",
+    "typescript": "^4.4.4"
   }
 }

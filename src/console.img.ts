@@ -1,5 +1,10 @@
+interface ImgInfo {
+  width?: number
+  height?: number
+}
+
 Object.defineProperty(console, 'img', {
-  value: function img(src: string, info: InfoType.ImgInfo) {
+  value: function img(src: string, info: ImgInfo) {
     if (!src) {
       console.warn('missing imgSrc property')
       return
