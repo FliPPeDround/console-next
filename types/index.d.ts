@@ -10,13 +10,13 @@ declare global {
     img(url: string, attr?: {
       width?: number
       height?: number
-    }): void
+    }): Promise<void>
 
     video(url: string, attr?: {
       width?: number
       height?: number
       loop?: boolean
-    }): void
+    }): Promise<void>
 
     edit(selectors?: string): void
     dom(selectors?: string): void

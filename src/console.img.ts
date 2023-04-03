@@ -12,11 +12,10 @@ Object.defineProperty(console, 'img', {
     const width = info?.width ?? 320
     const height = info?.height ?? 240
     if (src.startsWith('http'))
-      src = `data:image/png;base64,${await imageToBase64Browser(src)}`
+      src = await imageToBase64ByCanvas(src)
 
     console.log(
-      // eslint-disable-next-line @typescript-eslint/quotes
-      "%c ",
+      '%c ',
       `
       font-size: 1px;
       background-image: url(${src});
@@ -30,12 +29,19 @@ Object.defineProperty(console, 'img', {
   enumerable: true,
 })
 
-function base64ToBrowser(buffer: ArrayBuffer) {
-  return window.btoa([].slice.call(new Uint8Array(buffer)).map((bin) => { return String.fromCharCode(bin) }).join(''))
-}
-
-async function imageToBase64Browser(url: string) {
-  const response = await fetch(url)
-  const buffer = await response.arrayBuffer()
-  return base64ToBrowser(buffer)
+async function imageToBase64ByCanvas(src: string): Promise<string> {
+  const img = new Image()
+  img.src = src
+  img.setAttribute('crossOrigin', 'Anonymous')
+  return new Promise((resolve) => {
+    img.onload = () => {
+      const canvas = document.createElement('canvas')
+      canvas.width = img.width
+      canvas.height = img.height
+      const ctx = canvas.getContext('2d')!
+      ctx.drawImage(img, 0, 0, img.width, img.height)
+      const dataURL = canvas.toDataURL('image/png')
+      resolve(dataURL)
+    }
+  })
 }
